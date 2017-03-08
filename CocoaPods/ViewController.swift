@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ViewController: UIViewController {
 
@@ -20,6 +21,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //IBActionの中ではsenderが表示するボタン
+    @IBAction func show(_ sender: UIButton) {
+        sender.setTitle("表示しないよう", for: .normal)
+        SVProgressHUD.show()
+    }
+    @IBAction func kesu(_ sender: UIButton) {
+        SVProgressHUD.dismiss()
+        
+    }
 
 }
 
